@@ -1,0 +1,103 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/t1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ffffff"
+    android:orientation="vertical">
+
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/spinach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spinach"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="59dp"
+        android:paddingTop="0dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature:                      °C"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/spinach"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/thermo"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/spinach"
+        android:background="#00ffffff" />
+
+    <TextView
+            android:id="@+id/textVie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity:                            %"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/imageButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humid..."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBottom="@+id/textVie"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@mipmap/water"
+        android:scaleType="fitXY"
+        android:cropToPadding="true"
+        android:background="#00ffffff"
+        android:paddingBottom="30dp"
+        android:layout_below="@+id/textVie"
+        android:layout_alignStart="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/temperature"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toStartOf="@+id/textView4"
+        android:autoText="false"
+        android:hint="Temp..." />
+</RelativeLayout>
+    <include layout="@layout/component_sampling_control" />
+
+    <include layout="@layout/layout_two_button" />
+
+
+    <include layout="@layout/component_line_chart" />
+
+
+</LinearLayout>
+
